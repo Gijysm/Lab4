@@ -28,9 +28,10 @@ public class SecActiv extends AppCompatActivity {
         Bundle arguments = getIntent().getExtras();
         if(arguments != null)
         {
-            String Music_S = arguments.get("music").toString(),
-                    Person_S = arguments.get("person").toString();
-            textView.setText("Music: " + Music_S + "\n" + "Person: "+ Person_S);
+            String PrinterName = arguments.get("PrinterName").toString(),
+                    Company = arguments.get("Company").toString(),
+                    Serial_Number = arguments.get("Serial_Number").toString();
+            textView.setText("Printer: " + PrinterName + "\n" + "Company: "+ Company + "\n" + "Serial_Number: "+ Serial_Number);
         }
         setContentView(textView);
     }
