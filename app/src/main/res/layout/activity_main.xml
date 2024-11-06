@@ -29,11 +29,11 @@
                 android:layout_margin="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Printers_EditText"
+                    android:id="@+id/Tour_EditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:hint="Printer Name" />
+                    android:hint="Tour Name" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -43,11 +43,11 @@
                 android:layout_margin="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Company_EditText"
+                    android:id="@+id/Country_EditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:hint="Company Name" />
+                    android:hint="Country Name" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </TableRow>
@@ -67,11 +67,11 @@
                 android:layout_margin="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/SerialNumber_EditText"
+                    android:id="@+id/Money_EditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:hint="Serial Number" />
+                    android:hint="Match Money" />
             </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
 
