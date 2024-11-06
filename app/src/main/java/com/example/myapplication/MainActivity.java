@@ -11,20 +11,21 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    private TextInputEditText Music_layout;
-    private TextInputEditText Person_layout;
+    private TextInputEditText Printer_layout;
+    private TextInputEditText Company_layout;
+    private TextInputEditText Serial_Number_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        Music_layout = findViewById(R.id.Music_EditText);
-        Person_layout = findViewById(R.id.Person_EditText);
+        Printer_layout = findViewById(R.id.Printers_EditText);
+        Company_layout = findViewById(R.id.Company_EditText);
+        Serial_Number_layout = findViewById(R.id.SerialNumber_EditText);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -33,12 +34,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void OnClick(View view)
     {
-        String Music_S = Music_layout.getText().toString(),
-        Person_S = Person_layout.getText().toString();
-        Music music = new Music(Music_S, Person_S);
+        String PrinterName = Printer_layout.getText().toString(),
+        Company = Company_layout.getText().toString(),
+        Serial_Number = Serial_Number_layout.getText().toString();
+        Printer printer = new Printer(PrinterName, Company, Serial_Number);
         Intent intent = new Intent(this, SecActiv.class);
-        intent.putExtra("music", Music_S);
-        intent.putExtra("person", Person_S);
+        intent.putExtra("PrinterName", PrinterName);
+        intent.putExtra("Company", Company);
+        intent.putExtra("Serial_Number", Serial_Number);
         startActivity(intent);
     }
 }
