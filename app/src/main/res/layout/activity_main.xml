@@ -1,97 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:padding="16dp">
 
-    <TableLayout
-        android:id="@+id/tableLayout"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Tour_EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        tools:ignore="MissingConstraints">
+        android:hint="Введіть назву дисципліни"
+        android:inputType="text" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Space
-                android:layout_width="16dp"
-                android:layout_height="match_parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="8dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Tour_EditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="Tour Name" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="8dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Country_EditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="Country Name" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Space
-                android:layout_width="16dp"
-                android:layout_height="match_parent" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:layout_margin="8dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/Money_EditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="Match Money" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Space
-                android:layout_width="16dp"
-                android:layout_height="match_parent" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:layout_margin="8dp"
-                android:onClick="OnClick"
-                android:text="Submit" />
-        </TableRow>
-    </TableLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:onClick="OnClick" />
+</LinearLayout>
